@@ -1,3 +1,6 @@
+let playGame = true;
+
+while (playGame) {
 let moves = ["rock", "paper", "scissors"]
 let playerMove = prompt("Type in either rock, paper or scissors in lowercase!")
 let computerMove = moves[Math.floor(Math.random() * moves.length)];
@@ -29,10 +32,16 @@ function getWinner(playerMove, computerMove) {
         else if(playerMove === "paper" && computerMove === "scissors") {
             return `-1`;
         }
-  }
+    }
 
-let result = alert(getWinner(playerMove, computerMove))
+    let result = alert(getWinner(playerMove, computerMove))
 
+    playGame = confirm ("Do you want to play again?")
+}
+
+/*if (playGame) true; {
+   if  ("do you what to play again?");
+}
 
 
 
