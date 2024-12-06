@@ -1,9 +1,13 @@
 let moves = ["rock", "paper", "scissors"]
-let playerMove = prompt("Type in either rock, paper or scissors!")
-let computerMove = "paper";
+let playerMove = prompt("Type in either rock, paper or scissors in lowercase!")
+let computerMove = moves[Math.floor(Math.random() * moves.length)];
 
 function getWinner(playerMove, computerMove) {
-    
+// validation of player input
+    if (!moves.includes(playerMove)) {
+         return `Invalid input. Please choose either rock, scissors or paper.`
+    }
+
     if(playerMove === computerMove) {
         return `0`;
         }
@@ -25,20 +29,15 @@ function getWinner(playerMove, computerMove) {
         else if(playerMove === "paper" && computerMove === "scissors") {
             return `-1`;
         }
-        else {
-            console.log("Invalid input. Please choose either rock, scissors or paper.")   
-        }
   }
 
 let result = alert(getWinner(playerMove, computerMove))
 
+
+
+
+
 //let result = getWinner("rock", "paper");
-
-
-
-
-
-
 
 /*
 if(playerMove === computerMove) {
@@ -71,9 +70,11 @@ else {
 
 
 
-// Task for function 4
-// const random = Math.floor(Math.random() * moves.length); 
-//console.log (random, moves[random])
+/* Task for function 4
+const random = Math.floor(Math.random() * moves.length); 
+console.log (random, moves[random])
+*/
+
 /*
     if (hour < 18) {
         greeting = "Good day";
