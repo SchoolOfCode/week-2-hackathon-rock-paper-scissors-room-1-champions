@@ -46,13 +46,9 @@ function playGame() {
         let computerMove = moves[Math.floor(Math.random() * moves.length)];
 
         let result = getWinner(playerMove, computerMove);
+            gamesPlayed++;        
+        let outcomeMessage = alert(`Games Played: ${gamesPlayed}\nWins: ${wins}\nLosses: ${losses}\nDraws: ${draws}`);
     }
-
-        gamesPlayed++;
-
-        
-        let outcomeMessage = alert(`Games Played: ${gamesPlayed}\nWins: ${wins}\nLosses: ${losses}\nDraws: ${draws}`)";
-        
 
      while (confirm("Do you want to play again?"));
 
@@ -64,28 +60,15 @@ function playGame() {
 playGame();
 
 
+// 1 start the game
+// 2 take player move, computer move
+// 3 compare them, store the result
+// 4 give outcome if the game is won/lost
+// 5 prompt: do you want play again? yes 
+//loop to 1
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//move stuff one by one to loop and check if the function is doing what i want.
 
 
 
